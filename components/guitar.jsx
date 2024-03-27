@@ -1,4 +1,4 @@
-const Guitar = ({ guitar }) => {
+const Guitar = ({ guitar, addToCart }) => {
   const { name, description, price, image } = guitar;
 
   return (
@@ -14,7 +14,11 @@ const Guitar = ({ guitar }) => {
         <h3 className="text-black fs-4 fw-bold text-uppercase">{name}</h3>
         <p>{description}</p>
         <p className="fw-black text-primary fs-3">${price}</p>
-        <button type="button" className="btn btn-dark w-100">
+        <button 
+          type="button" 
+          className="btn btn-dark w-100"
+          onClick={() => addToCart(guitar)}  
+        >
           Agregar al Carrito
         </button>
       </div>
