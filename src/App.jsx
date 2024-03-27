@@ -1,7 +1,14 @@
+import { useState } from 'react';
+
 import Header from "../components/Header";
 import Guitar from "../components/guitar";
 
 function App() {
+  // State
+  const [ auth, setAuth ] = useState(true);
+  const [ total, setTotal ] = useState(0);
+  const [ cart, setCart ] = useState([]);
+
   return (
     <>
       <Header />
