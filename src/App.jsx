@@ -5,6 +5,7 @@ import { db } from './data/db.js';
 
 function App() {
   const [ data, setData ] = useState(db);
+  const [ chart, setChart ] = useState([]);
 
   return (
     <>
