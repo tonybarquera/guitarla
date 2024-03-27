@@ -5,7 +5,7 @@ import { db } from './data/db.js';
 
 function App() {
   const [ data, setData ] = useState(db);
-  const [ chart, setChart ] = useState([]);
+  const [ cart, setCart ] = useState([]);
 
   return (
     <>
@@ -18,6 +18,7 @@ function App() {
             <Guitar
               key={guitar.id}
               guitar={guitar}
+              setCart={setCart}
             />
           )) }
         </div>
