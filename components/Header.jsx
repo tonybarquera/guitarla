@@ -1,6 +1,6 @@
 import { useMemo, Fragment } from "react";
 
-function Header({ cart }) {
+function Header({ cart, removeItem, increaseQuantity, decreaseQuantity }) {
   // State Derivado
   const isEmpty = useMemo(() => cart.length === 0, [cart]);
   const cartTotal = useMemo(() => cart.reduce((prev, item) => prev + (item.price * item.quantity), 0), [cart]);
@@ -54,16 +54,16 @@ function Header({ cart }) {
                             <td>{item.name}</td>
                             <td className="fw-bold">${item.price}</td>
                             <td className="flex align-items-start gap-4">
-                              <button type="button" className="btn btn-dark">
+                              <button type="button" className="btn btn-dark" onClick={() => decreaseQuantity(item.id)}>
                                 -
                               </button>
                               {item.quantity}
-                              <button type="button" className="btn btn-dark">
+                              <button type="button" className="btn btn-dark" onClick={() => increaseQuantity(item.id)}>
                                 +
                               </button>
                             </td>
                             <td>
-                              <button className="btn btn-danger" type="button">
+                              <button className="btn btn-danger" type="button" onClick={() => removeItem(item.id)}>
                                 X
                               </button>
                             </td>
