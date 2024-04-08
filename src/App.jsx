@@ -16,10 +16,10 @@ function App() {
         isEmpty={isEmpty}
         cartTotal={cartTotal}
       />
-      <main className="container-xl mt-5">
-        <h2 className="text-center">Nuestra Colección</h2>
+      <main className="max-w-7xl mx-auto mt-5 bg-blue-100 px-10">
+        <h2 className="text-center text-orange-400">Nuestra Colección</h2>
 
-        <div className="row mt-5">
+        <div className="grid grid-cols-3 mt-5">
           { data.map(guitar => (
             <Guitar
               key={guitar.id}
