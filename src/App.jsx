@@ -16,10 +16,10 @@ function App() {
         isEmpty={isEmpty}
         cartTotal={cartTotal}
       />
-      <main className="max-w-7xl mx-auto mt-5 bg-blue-100 px-10">
-        <h2 className="text-center text-orange-400">Nuestra Colección</h2>
+      <main className="max-w-7xl mx-auto mt-14 px-3 md:px-5">
+        <h2 className="text-center text-4xl font-bold text-orange-400">Nuestra Colección</h2>
 
-        <div className="grid grid-cols-3 mt-5">
+        <div className="mt-14 gap-5 lg:gap-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           { data.map(guitar => (
             <Guitar
               key={guitar.id}
@@ -30,9 +30,9 @@ function App() {
         </div>
       </main>
 
-      <footer className="bg-dark mt-5 py-5">
-        <div className="container-xl">
-          <p className="text-white text-center fs-4 mt-4 m-md-0">
+      <footer className="bg-gray-900 py-14 mt-14">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-white text-center text-2xl mx-2">
             GuitarLA - Todos los derechos Reservados
           </p>
         </div>

@@ -2,21 +2,21 @@ const Guitar = ({ guitar, addToCart }) => {
   const { name, description, price, image } = guitar;
 
   return (
-    <div className="border border-blue-300 grid grid-cols-2 grid-rows-1">
-      <div className="">
+    <div className="flex items-center hover:scale-110 transition-all">
+      <div>
         <img
-          className="h-auto"
+          className="w-auto hover:-rotate-3"
           src={`/img/${image}.jpg`}
           alt="imagen guitarra"
         />
       </div>
-      <div className="bg-red-100 ">
-        <h3 className="text-black fs-4 fw-bold text-uppercase">{name}</h3>
-        <p>{description}</p>
-        <p className="fw-black text-primary fs-3">${price}</p>
+      <div className="p-2 flex flex-col justify-center h-full space-y-2 lg:space-y-4">
+        <h3 className="text-black text-2xl">{name}</h3>
+        <p className="text-md">{description}</p>
+        <p className="font-black text-orange-400 text-4xl">${price}</p>
         <button 
           type="button" 
-          className="btn btn-dark w-100"
+          className="w-full bg-gray-900 text-white font-black cursor-pointer uppercase p-2 shadow-md rounded-md hover:bg-gray-700"
           onClick={() => addToCart(guitar)}  
         >
           Agregar al Carrito
